@@ -1,0 +1,243 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+ /*for container and content  */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  border: none;
+  border-radius: 4px;
+  margin: auto;
+  background-color: white;
+  min-height: 700px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+/* date input */
+.title h2{
+  text-transform: uppercase;
+}
+#iAge:focus, #iHeight:focus, #iWeight:focus{
+  padding: 15px;
+}
+/* .msg1, .msg2, .msg3{
+  color: #fa2d2d;
+  font-size: 12px;
+  display: none;
+} */
+.content input:invalid{
+  animation: shake 300ms;
+  outline-color: #fa2d2d;
+}
+@keyframes shake{
+  25% {transform: translateX(4px);}
+  50%{transform: translateX(-4px);}
+  75%{transform: translateX(4px);}
+  100%{transform: translateX(-4px);}
+}
+#iAge, #iHeight, #iWeight{
+  border: 1px solid #20B9E1;
+  padding: 10px;
+  width: 500px;
+  min-width: 300px;
+  border-radius: 4px;
+}
+/* radio check section */
+.gender-section{
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  width: 500px;
+}
+.goal-section{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.content input{
+  border: 1px solid rgb(160, 160, 160);
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="radio"]:checked {
+  background-color: #20B9E1;
+}
+
+input[type="radio"] + label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+/* select option */
+#iActivity {
+  width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #20B9E1;
+  border-radius: 4px;
+  cursor: pointer;
+  outline-color:  #20B9E1;
+}
+
+#iActivity option {
+  padding: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+}
+#show_more{
+  position: absolute;
+  max-width: 35px;
+  max-height: 35px;
+  padding: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+#show_more:hover{
+  padding: 3px;
+}
+#info_calories{
+  display: none;
+}
+/* result and icons */
+.calculate{
+  background-color:  #ffff;
+  color: #20B9E1;
+  border: 1px solid #20B9E1;
+  padding: 10px;
+  width: 500px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: medium;
+  transition: 0.3s;
+}
+.calculate:hover{
+  background-color: #20B9E1;
+  color: #ffff;
+}
+.calculate:active{
+  background-color: #50dafd;
+}
+.separate{
+  width: 500px;
+  height: 1px;
+  border: 1px solid #20B9E1;
+}
+.icons{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  justify-items: center;
+  margin: auto;
+}
+.icons div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons img{
+  width: 100px;
+}
+
+.display{
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+/* show section */
+.show-section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+.show-section p{
+  position: relative;
+  top: 0%;
+  left: 90%;
+  height: auto;
+  background-color: #777777;
+  color: #ffff;
+  padding: 3px;
+  font-size: 15px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-section:hover p{
+  opacity: 1;
+  transition: all 0.4s 0.5s ease;
+}
+
+
+
+/* responsive content */
+@media screen and (max-width: 560px){
+  .icons{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 560px){
+  .title h2{
+    width: 100%;
+  }
+  .container{
+    width: 100%;
+  }
+  .content{
+    width: 100%;
+  }
+  #iAge, #iHeight, #iWeight{
+    width: 100%;
+  }
+  .gender-section{
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+  }
+  .goal-section{
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+  }
+  .calculate{
+    width: auto;
+  }
+  #iActivity{
+    width: 100%;
+  }
+  .separate{
+    width: 100%;
+  }
+}
+
