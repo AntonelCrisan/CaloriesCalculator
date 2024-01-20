@@ -32,18 +32,15 @@
             </div>
             <div class="age-section">
                 <p class="age">Age</p>
-                <input id="iAge" placeholder="Years" pattern="[0-9]{1,3}" required >
-                <!-- <p class="msg1">&#9888; Please enter your age</p> -->
+                <input id="iAge" placeholder="Years" required >
             </div>
             <div class="height-section">
                 <p class="height">Height</p>
-                <input id="iHeight" placeholder="Centimeters" pattern="[0-9]{1,3}" required>
-                <!-- <p class="msg2">&#9888; Please enter your height</p> -->
+                <input id="iHeight" placeholder="Centimeters" required>
             </div>
             <div class="weight-section">
                 <p class="weight">Weight</p>
-                <input id="iWeight" placeholder="Kilograms" pattern="[0-9]{1,3}" required>
-                <!-- <p class="msg3">&#9888; Please enter your weight</p> -->
+                <input id="iWeight" placeholder="Kilograms" required>
             </div>
             <div class="gender-section">
                 <p>Gender:</p>
@@ -65,6 +62,9 @@
                     <option id = "4" value="intense">Intense physical activity</option>
                     <option id = "5" value="very_intense">Very intense physical activity</option>
                 </select>
+            </div>
+            <div id="errorMessage">
+
             </div>
             <div class="btn">
                 <button type="submit" class="calculate">Calculate</button>
@@ -96,6 +96,9 @@
             </div>
         </div>    
     </div>
+    <footer class="footer">
+        Copyright © 2024 Crisan Antonel
+    </footer>
     <script src="scripts/script.js"></script>
 
 </body>
